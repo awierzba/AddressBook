@@ -22,12 +22,16 @@ public class Main {
 
             int userInput = scanner.nextInt();
 
+            //TODO - display guest by name
+
             switch (userInput) {
-                case 1 -> menuInteraction.showContacts();
+                case 1 -> menuInteraction.displayContacts();
                 case 2 -> menuInteraction.addContact();
-                case 3 -> menuInteraction.showOneContact();
+                case 3 -> menuInteraction.displayOneContact();
                 case 4 -> menuInteraction.deleteContact();
                 case 5 -> cont = false;
+                case 6 -> menuInteraction.displayContactByName();
+
             }
         }
     }
