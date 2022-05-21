@@ -36,10 +36,13 @@ public class MenuInteraction {
         contacts.add(client);
         clientsNames.put(clientName, client);
         phoneNumber.put(clientPhoneNumber, client);
+
     }
 
     public void displayContacts() {
         for (Client client : contacts) {
+            int index = contacts.indexOf(client);
+            System.out.println(++index + ".");
             client.displayContact();
         }
     }
