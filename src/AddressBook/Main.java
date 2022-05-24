@@ -1,7 +1,5 @@
 package AddressBook;
 
-// TODO practice Address Books! - add phone number, location (with hashmap - no doubles), make a search by phone number + throw exceptions + Exceptions regarding invalid input format
-
 import java.util.Scanner;
 
 public class Main {

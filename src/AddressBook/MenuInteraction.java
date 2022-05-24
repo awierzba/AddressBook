@@ -24,8 +24,6 @@ public class MenuInteraction {
         System.out.println("Was the client contacted?(answer with Y/N):");
         String isContactedString = scanner.nextLine();
 
-        // TODO add ordinal numbers to the List
-
         boolean isContacted;
 
         isContacted = isContactedString.equals("Y");
@@ -69,8 +67,6 @@ public class MenuInteraction {
             System.out.println();
         }
     }
-
-    // TODO improve deleteContact
 
     public void deleteContact() {
         System.out.println("Please provide an ordinal number of a contact to be deleted:");

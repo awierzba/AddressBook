@@ -35,36 +35,4 @@ public class SaveAsTxtFile {
         }
     }
 }
-//
-//    public void createFile() {
-//        System.out.println("Please provide a name for a new file: ");
-//        Scanner scanner = new Scanner(System.in);
-//        String newFileName = scanner.nextLine();
-//        try {
-//            File newFile = new File(newFileName);
-//            if (newFile.createNewFile()) {
-//                System.out.println("File created: " + newFile.getName());
-//            } else {
-//                System.out.println("File already exists.");
-//            }
-//        } catch (
-//                IOException e) {
-//            System.out.println("An error occurred.");
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void writeFile() {
-//        System.out.println("Please provide ");
-//        try {
-//            FileWriter myWriter = new FileWriter(newFileName);
-//            myWriter.write("Okay");
-//            myWriter.close();
-//            System.out.println("Successfully wrote to the file.");
-//        } catch (
-//                IOException e) {
-//            System.out.println("An error occurred.");
-//            e.printStackTrace();
-//        }
-//    }
 
