@@ -14,15 +14,27 @@ public class MenuInteraction {
 
         System.out.println("Please provide contact name:");
         String clientName = scanner.nextLine();
+        while (!clientName.matches("[a-zA-Z]+")) {
+            System.out.println("Invalid input provided, please insert correct data:");
+            clientName = scanner.nextLine();
+        }
 
         System.out.println("Please provide contact's location:");
         String clientLocation = scanner.nextLine();
+        while (!clientLocation.matches("[a-zA-Z]+")) {
+            System.out.println("Invalid input provided, please insert correct data:");
+            clientLocation = scanner.nextLine();
+        }
 
         System.out.println("Please provide client's phone number:");
         int clientPhoneNumber = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Was the client contacted?(answer with Y/N):");
         String isContactedString = scanner.nextLine();
+        while (!isContactedString.matches("[YN]")) {
+            System.out.println("Invalid input provided, please answer with Y/N:");
+            isContactedString = scanner.nextLine();
+        }
 
         boolean isContacted;
 
@@ -78,4 +90,3 @@ public class MenuInteraction {
         saveTxt.saveFile();
     }
 }
-

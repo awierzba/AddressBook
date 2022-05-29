@@ -21,7 +21,7 @@ public class SaveAsTxtFile {
             String newFileName = scanner.nextLine();
             try (
                     PrintWriter out = new PrintWriter(newFileName)) {
-                out.println("Siema");
+                out.println("Hello");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } finally {

@@ -39,7 +39,7 @@ public class Main {
                     case 8 -> cont = false;
                 }
             } catch (java.util.InputMismatchException e) {
-                System.out.println("Invalid figure provided, please enter correct one:");
+                System.out.println("Invalid figure provided");
                 cont = false;
             }
         }
