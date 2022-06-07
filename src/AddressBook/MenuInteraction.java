@@ -4,10 +4,10 @@ import java.util.*;
 
 public class MenuInteraction {
     Scanner scanner = new Scanner(System.in);
-    private final List<Client> contacts = new ArrayList<>();
-    private final Set<String> locations = new HashSet<>();
-    private final HashMap<String, Client> clientsNames = new HashMap<>();
-    private final HashMap<Integer, Client> phoneNumber = new HashMap<>();
+    public final List<Client> contacts = new ArrayList<>();
+    public final Set<String> locations = new HashSet<>();
+    public final HashMap<String, Client> clientsNames = new HashMap<>();
+    public final HashMap<Integer, Client> phoneNumber = new HashMap<>();
     SaveAsTxtFile saveTxt = new SaveAsTxtFile();
 
     public void addContact() {
@@ -47,37 +47,6 @@ public class MenuInteraction {
         clientsNames.put(clientName, client);
         phoneNumber.put(clientPhoneNumber, client);
 
-    }
-
-    public void displayContacts() {
-        for (Client client : contacts) {
-            int index = contacts.indexOf(client);
-            System.out.println(++index + ".");
-            client.displayContact();
-        }
-    }
-
-    public void displayContactByName() {
-        System.out.println("Please provide contact's name:");
-        System.out.println();
-        String name = scanner.nextLine();
-        Client client = clientsNames.get(name);
-        client.displayContact();
-    }
-
-    public void displayContactByPhoneNumber() {
-        System.out.println("Please provide phone number:");
-        System.out.println();
-        Integer number = Integer.valueOf(scanner.nextLine());
-        Client client = phoneNumber.get(number);
-        client.displayContact();
-    }
-
-    public void displayLocations() {
-        for (String location : locations) {
-            System.out.println(location);
-            System.out.println();
-        }
     }
 
     public void deleteContact() {

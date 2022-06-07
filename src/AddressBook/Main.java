@@ -7,6 +7,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         MenuInteraction menuInteraction = new MenuInteraction();
+        Display display = new Display();
 
         boolean cont = true;
 
@@ -24,16 +25,16 @@ public class Main {
             try {
                 int userInput = scanner.nextInt();
 
-                if (userInput > 8) {
+                if (userInput > 8 || userInput == 0) {
                     throw new CustomException("The provided number is incorrect.");
                 }
 
                 switch (userInput) {
-                    case 1 -> menuInteraction.displayContacts();
+                    case 1 -> display.displayAllContacts();
                     case 2 -> menuInteraction.addContact();
-                    case 3 -> menuInteraction.displayContactByName();
-                    case 4 -> menuInteraction.displayContactByPhoneNumber();
-                    case 5 -> menuInteraction.displayLocations();
+                    case 3 -> display.displayContactByName();
+                    case 4 -> display.displayContactByPhoneNumber();
+                    case 5 -> display.displayLocations();
                     case 6 -> menuInteraction.deleteContact();
                     case 7 -> menuInteraction.saveAsTxt();
                     case 8 -> cont = false;
